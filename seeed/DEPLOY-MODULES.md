@@ -1,6 +1,6 @@
 # Deploy modules
 
-[Configuring your device as an Edge device](configure-edge-device.md) started the `edgeAgent` module (running as a Docker container) on the device. The `edgeAgent` has connection information for your IoT Hub, Edge device, and Azure Container Registry. Deploying code to your device requires pushing a deployment manifest (which contains information about which modules a device will run, the routes between modules, etc) to Azure IoT Edge (preview). After you push the deployment manifest to Azure IoT Edge, the `edgeAgent` pulls down the manifiest and the specified containers, starts the containers, and routes messages between them.
+[Configuring your device as an Edge device](configure-edge-device.md) started the `edgeAgent` module (running as a Docker container) on the device. The `edgeAgent` has connection information for your IoT Hub, Edge device, and Azure Container Registry. Deploying code to your device requires pushing a deployment manifest (which contains information about which modules a device will run, the routes between modules, etc) to Azure IoT Edge (preview). After you push the deployment manifest to Azure IoT Edge, the `edgeAgent` pulls down the manifest and the specified containers, starts the containers, and routes messages between them.
 
 You can use Visual Studio Code to push configuration changes to Azure IoT Edge (i.e. create an Edge deployment). The configuration you will push references pre-built modules hosted in a public container registry.
 
@@ -13,7 +13,7 @@ You can use Visual Studio Code to push configuration changes to Azure IoT Edge (
 
 1. Deploy modules: In the VS Code Explorer, right click the `/config/deployment.json` file and select `Create deployment for Edge device`. In the command palette that opens, select your edge device.
 
-It will take a few minutes for the `edgeAgent` to pull down the manifiest, the `edgeHub` and `temperature-sensor` modules, and start them. If you still have your keyboard and monitor connected to the Raspberry Pi 3, you can use the following `docker` commands to monitor the deployment progress:
+It will take a few minutes for the `edgeAgent` to pull down the manifest, the `edgeHub` and `temperature-sensor` modules, and start them. If you still have your keyboard and monitor connected to the Raspberry Pi 3, you can use the following `docker` commands to monitor the deployment progress:
 
     - `sudo docker ps`
     - `sudo docker logs -f edgeAgent`
