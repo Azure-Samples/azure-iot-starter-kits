@@ -56,7 +56,7 @@ Instructions below assume that you have completed the physical assembly of your 
 
 ## Configure your device as a wireless access point
 
-Steps in this section are taken from [https://www.raspberrypi.org/documentation/configuration/wireless/access-point.md](https://www.raspberrypi.org/documentation/configuration/wireless/access-point.md). For a video overview of these steps, see [http://link-to-WAP-steps](http://link-to-WAP-steps).
+Steps in this section are taken from [https://www.raspberrypi.org/documentation/configuration/wireless/access-point.md](https://www.raspberrypi.org/documentation/configuration/wireless/access-point.md).
 
 1. Connect your device to the internet. You should have done this in the previous section, but if not, you can do this in one of two ways:
 

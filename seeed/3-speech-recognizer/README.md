@@ -49,7 +49,7 @@ Complete steps in [Setup your device](../SETUP-DEVICE.md).
 
 If you **HAVE NOT** completed this section in a previous project, complete steps in [Configure your device as an Azure IoT Edge device](../CONFIG-EDGE-DEVICE.md).
 
-If you **HAVE** completed this section in another project, you only need to complete the steps in [Delete Edge deployment](../DELETE-EDGE-DEPLOYMENT), then delete the idle images on your device by listing images on your device...
+If you **HAVE** completed this section in another project, you only need to complete the steps in [Delete Edge deployment](../DELETE-EDGE-DEPLOYMENT.md), then delete the idle images on your device by listing images on your device...
 
 `sudo docker image ls`
 
@@ -195,7 +195,7 @@ You should see messages appear in the VS Code output window.
 
 ## Clean up
 
-If you plan to work through other projects in this repository, you can use the Azure resources that you used in this project (Resource Group, IoT Hub, Edge Device, Container Registry). However, you should delete your IoT Edge deployment and delete idle images on your device. To do this, complete the steps in [Delete Edge deployment](../DELETE-EDGE-DEPLOYMENT), then delete the idle images by listing images on your device...
+If you plan to work through other projects in this repository, you can use the Azure resources that you used in this project (Resource Group, IoT Hub, Edge Device, Container Registry). However, you should delete your IoT Edge deployment and delete idle images on your device. To do this, complete the steps in [Delete Edge deployment](../DELETE-EDGE-DEPLOYMENT.md), then delete the idle images by listing images on your device...
 
 `sudo docker image ls`
 
