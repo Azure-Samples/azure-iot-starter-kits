@@ -33,7 +33,7 @@ After attaching the above components you will boot the Raspberry Pi 3, enable SS
 
 ### Physical assembly
 
-For a video overview of the physical assembly steps, download and watch the following: [Assembling the Rasberry Pi 3 for the temperature-sensor project](https://iotcompanionapp.blob.core.windows.net/videos/temp-sensor-assembly.mp4).
+For a video overview of the physical assembly steps, download and watch the following: [Assembling the Raspberry Pi 3 for the temperature-sensor project](https://iotcompanionapp.blob.core.windows.net/videos/temp-sensor-assembly.mp4).
 
 1. Remove Raspberry Pi 3 (including USB/micro USB power cable) and micro SD card from packaging.
 1. Insert the micro SD card into micro SD card port on the Raspberry Pi 3.
@@ -95,4 +95,8 @@ You can verify that messages are reaching Azure IoT Hub by navigating to your Io
 
 ## Clean up
 
-To delete the resources you have created, complete the steps in [Clean up resources](../CLEAN-UP-RESOURCES.md).
+If you plan to work through other projects in this repository, you can use the Azure resources you used in this project (Resource Group, IoT Hub, Edge Device, Container Registry). However, you should delete your IoT Edge deployment and delete idle images on your device. To do this, complete the steps in [Delete Edge deployment](../DELETE-EDGE-DEPLOYMENT), then delete the `azureiotedge-seeed-temperature-sensor` image by executing the following command on your device:
+
+`sudo docker image rm azureiotedge-seeed-temperature-sensor`
+
+If you don't plan to work through other projects in this repository, you can delete all the resources you have created by following the steps in [Clean up all resources](../CLEAN-UP-RESOURCES.md).
