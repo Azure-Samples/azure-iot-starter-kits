@@ -37,9 +37,6 @@ Instructions below assume that you have completed the physical assembly of your 
     - Select I3 for `Change Keyboard Layout`
     - Select the appropriate values from the following screens, e.g. 'English (US)', pressing `ENTER` on each screen to make a selection
 1. Press `ESC` to exit raspi-config.
-1. Finish enabling the camera:
-
-    `echo bcm2835-v4l2 | sudo tee --append /etc/modules`
 
 1. Configure the Pi HAT Microphone:
 
