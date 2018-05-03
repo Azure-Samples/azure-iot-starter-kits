@@ -69,6 +69,8 @@ If you deploy pre-built modules, [Delete your deployment](../DELETE-EDGE-DEPLOYM
 
 In this section you will make a code changes, build and push modules to your own container registry, and deploy them to your Raspberry Pi 3. The code changes suggested below are designed to improve the functionality of your edge device as a "chat bot". As it is, the device can recognize simple greetings (e.g. "Hello") and respond with a simple response (e.g. "Hey!). You will add functionality that allows the device to recognize farewells (e.g. "Goodbye") and respond appropriately. After you have added this functionality, you should have a basic understanding of how to add more (and richer) functionality.
 
+For a video overview of the steps below, see [Deploying the speech-recognizer](https://iotcompanionapp.blob.core.windows.net/videos/deploy-speech-recognizer.mp4).
+
 1. Get the code and open the solution in VS Code:
 
     `git clone git@github.com:Azure-Samples/azure-iot-starter-kits.git`
