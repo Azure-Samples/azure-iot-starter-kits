@@ -95,7 +95,7 @@ You can verify that messages are reaching Azure IoT Hub by navigating to your Io
 
 ## Clean up
 
-If you plan to work through other projects in this repository, you can use the Azure resources you used in this project (Resource Group, IoT Hub, Edge Device, Container Registry). However, you should delete your IoT Edge deployment and delete idle images on your device. To do this, complete the steps in [Delete Edge deployment](../DELETE-EDGE-DEPLOYMENT), then delete the `azureiotedge-seeed-temperature-sensor` image by executing the following command on your device:
+If you plan to work through other projects in this repository, you can use the Azure resources you used in this project (Resource Group, IoT Hub, Edge Device, Container Registry). However, you should delete your IoT Edge deployment and delete idle images on your device. To do this, complete the steps in [Delete Edge deployment](../DELETE-EDGE-DEPLOYMENT.md), then delete the `azureiotedge-seeed-temperature-sensor` image by executing the following command on your device:
 
 `sudo docker image rm azureiotedge-seeed-temperature-sensor`
 
