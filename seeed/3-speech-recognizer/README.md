@@ -178,7 +178,7 @@ class GoodbyeIntent(Intent):
 
     **NOTE**: The first time you build the project the base image must be downloaded, which can take several minutes. Subsequent builds will take only a matter of seconds.
 
-1. Deploy your modules: In VS Code Explorer, right click `deployment.template.json` and select `Generate IOT Edge Deployment manifest`. This will create a deployment manifest file: `/config/deployment.json`. In the VS Code Explorer, right click the `/config/deployment.json` file and select `Create deployment for Edge device`. In the command palette that opens, select your edge device.
+1. The previous step created a deployment manifest file: `/config/deployment.json`. In the VS Code Explorer, right click the `/config/deployment.json` file and select `Create deployment for Edge device`. In the command palette that opens, select your edge device.
 
 When deployment is complete (after a few minutes), you will see the following message displayed on the OLED display: "Hold button and speak". Press the button and hold it while you speak. Release the button. In a few seconds you should see a response on the OLED display. The code you have deployed will recognize simple greetings and goodbyes. You can also try phrases like "tell me a joke" or "what time is it" to get interesting responses.
 
