@@ -23,4 +23,6 @@ You will use a laptop to provision resources in Azure (e.g. Azure IoT Hub), conf
 
     After installation, use `az extension list` to validate the currently installed extensions or `az extension show --name azure-cli-iot-ext` to see details about the IoT extension.
 
-1. Azure IoT Starter Kit companion CLI: (***Install method/steps TBD***)
+1. Azure IoT Starter Kit companion CLI: After you have installed Python/pip, execute the following command:
+
+    `pip install azure-iot-starterkit-cli`
