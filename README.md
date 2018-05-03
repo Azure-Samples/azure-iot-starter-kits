@@ -1,57 +1,18 @@
-# Project Name
+# Azure IoT Starter Kits
 
-(short, 1-3 sentenced, description of the project)
+This repository contains code and instructions for deploying code to Azure IoT Edge devices. Each project is a proof-of-concept and designed as a learning experience. Projects are specific to a manufacturer's device.
 
-## Features
+## Manufacturers
 
-This project framework provides the following features:
+Projects exist for the following manufacturers:
 
-* Feature 1
-* Feature 2
-* ...
+* [seeed](seeed/README.md)
 
 ## Getting Started
 
-### Prerequisites
+Start with the README.md for each project.
 
-(ideally very short, if any)
+## Additional Resources
 
-- OS
-- Library version
-- ...
-
-### Installation
-
-(ideally very short)
-
-- npm install [package name]
-- mvn install
-- ...
-
-### Quickstart
-(Add steps to get up and running quickly)
-
-1. git clone [repository clone url]
-2. cd [respository name]
-3. ...
-
-
-## Demo
-
-A demo app is included to show how to use the project.
-
-To run the demo, follow these steps:
-
-(Add steps to start up the demo)
-
-1.
-2.
-3.
-
-## Resources
-
-(Any additional resources or related projects)
-
-- Link to supporting information
-- Link to similar sample
-- ...
+* [Microsoft Azure IoT Edge](https://azure.microsoft.com/en-us/services/iot-edge/)
+* [Azure IoT Edge documentation](https://docs.microsoft.com/en-us/azure/iot-edge/)

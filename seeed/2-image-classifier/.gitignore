@@ -1,0 +1,4 @@
+config/
+.env
+bin/
+obj/

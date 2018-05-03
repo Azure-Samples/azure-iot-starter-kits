@@ -1,0 +1,346 @@
+{
+  "rasa_nlu_data": {
+    "common_examples": [
+      {
+        "text": "hey", 
+        "intent": "greet", 
+        "entities": []
+      }, 
+      {
+        "text": "howdy", 
+        "intent": "greet", 
+        "entities": []
+      }, 
+      {
+        "text": "hey there",
+        "intent": "greet", 
+        "entities": []
+      }, 
+      {
+        "text": "hello", 
+        "intent": "greet", 
+        "entities": []
+      }, 
+      {
+        "text": "hi", 
+        "intent": "greet", 
+        "entities": []
+      },
+      {
+        "text": "good morning",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "good evening",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "dear sir",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "hell",
+        "intent": "unknown",
+        "entities": []
+      },
+      {
+        "text": "he",
+        "intent": "unknown",
+        "entities": []
+      },
+      {
+        "text": "heat",
+        "intent": "unknown",
+        "entities": []
+      },
+      {
+        "text": "hey you",
+        "intent": "unknown",
+        "entities": []
+      },
+      {
+        "text": "what time is it",
+        "intent": "get_time",
+        "entities": []
+      },
+      {
+        "text": "what is the time",
+        "intent": "get_time",
+        "entities": []
+      },
+      {
+        "text": "what is time",
+        "intent": "get_time",
+        "entities": []
+      },
+      {
+        "text": "what's the time",
+        "intent": "get_time",
+        "entities": []
+      },
+      {
+        "text": "what's time",
+        "intent": "get_time",
+        "entities": []
+      },
+      {
+        "text": "time please",
+        "intent": "get_time",
+        "entities": []
+      },
+      {
+        "text": "please tell me time",
+        "intent": "get_time",
+        "entities": []
+      },
+      {
+        "text": "tell me the time",
+        "intent": "get_time",
+        "entities": []
+      },
+      {
+        "text": "time",
+        "intent": "get_time",
+        "entities": []
+      },
+      {
+        "text": "what",
+        "intent": "unknown",
+        "entities": []
+      },
+      {
+        "text": "what is",
+        "intent": "unknown",
+        "entities": []
+      },
+      {
+        "text": "what is the",
+        "intent": "unknown",
+        "entities": []
+      },
+      {
+        "text": "what is",
+        "intent": "unknown",
+        "entities": []
+      },
+      {
+        "text": "please",
+        "intent": "unknown",
+        "entities": []
+      },
+      {
+        "text": "tell",
+        "intent": "unknown",
+        "entities": []
+      },
+      {
+        "text": "tell me",
+        "intent": "unknown",
+        "entities": []
+      },
+      {
+        "text": "is it",
+        "intent": "unknown",
+        "entities": []
+      },
+      {
+        "text": "what's",
+        "intent": "unknown",
+        "entities": []
+      },
+      {
+        "text": "tell me a joke",
+        "intent": "ask_joke",
+        "entities": []
+      },
+      {
+        "text": "tell me joke",
+        "intent": "ask_joke",
+        "entities": []
+      },
+      {
+        "text": "say a joke",
+        "intent": "ask_joke",
+        "entities": []
+      },
+      {
+        "text": "tell joke",
+        "intent": "ask_joke",
+        "entities": []
+      },
+      {
+        "text": "speak a joke",
+        "intent": "ask_joke",
+        "entities": []
+      },
+      {
+        "text": "show me a joke",
+        "intent": "ask_joke",
+        "entities": []
+      },
+      {
+        "text": "get me a joke",
+        "intent": "ask_joke",
+        "entities": []
+      },
+      {
+        "text": "joke",
+        "intent": "ask_joke",
+        "entities": []
+      },
+      {
+        "text": "speak a",
+        "intent": "unknown",
+        "entities": []
+      },
+      {
+        "text": "tell me a",
+        "intent": "unknown",
+        "entities": []
+      },
+      {
+        "text": "tell a",
+        "intent": "unknown",
+        "entities": []
+      },
+      {
+        "text": "show me",
+        "intent": "unknown",
+        "entities": []
+      },
+      {
+        "text": "speak",
+        "intent": "unknown",
+        "entities": []
+      },
+      {
+        "text": "say",
+        "intent": "unknown",
+        "entities": []
+      },
+      {
+        "text": "tell me a hello",
+        "intent": "unknown",
+        "entities": []
+      },
+      {
+        "text": "tell me hello",
+        "intent": "unknown",
+        "entities": []
+      },
+      {
+        "text": "say a hello",
+        "intent": "unknown",
+        "entities": []
+      },
+      {
+        "text": "speak a hello",
+        "intent": "unknown",
+        "entities": []
+      },
+      {
+        "text": "show me a hello",
+        "intent": "unknown",
+        "entities": []
+      },
+      {
+        "text": "get me a hello",
+        "intent": "unknown",
+        "entities": []
+      },
+      {
+        "text": "tell me a hi",
+        "intent": "unknown",
+        "entities": []
+      },
+      {
+        "text": "tell me hi",
+        "intent": "unknown",
+        "entities": []
+      },
+      {
+        "text": "say a hi",
+        "intent": "unknown",
+        "entities": []
+      },
+      {
+        "text": "speak a hi",
+        "intent": "unknown",
+        "entities": []
+      },
+      {
+        "text": "show me a hi",
+        "intent": "unknown",
+        "entities": []
+      },
+      {
+        "text": "get me a hi",
+        "intent": "unknown",
+        "entities": []
+      },
+      {
+        "text": "tell me a jog",
+        "intent": "unknown",
+        "entities": []
+      },
+      {
+        "text": "tell me jog",
+        "intent": "unknown",
+        "entities": []
+      },
+      {
+        "text": "say a jog",
+        "intent": "unknown",
+        "entities": []
+      },
+      {
+        "text": "speak a jog",
+        "intent": "unknown",
+        "entities": []
+      },
+      {
+        "text": "show me a jog",
+        "intent": "unknown",
+        "entities": []
+      },
+      {
+        "text": "get me a jog",
+        "intent": "unknown",
+        "entities": []
+      },
+      {
+        "text": "tell me a jet",
+        "intent": "unknown",
+        "entities": []
+      },
+      {
+        "text": "tell me jet",
+        "intent": "unknown",
+        "entities": []
+      },
+      {
+        "text": "say a jet",
+        "intent": "unknown",
+        "entities": []
+      },
+      {
+        "text": "speak a jet",
+        "intent": "unknown",
+        "entities": []
+      },
+      {
+        "text": "show me a jet",
+        "intent": "unknown",
+        "entities": []
+      },
+      {
+        "text": "get me a jet",
+        "intent": "unknown",
+        "entities": []
+      }
+    ]
+  }
+}

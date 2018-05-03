@@ -1,0 +1,14 @@
+{
+    "$schema-version": "0.0.1",
+    "description": "",
+    "image": {
+        "repository": "microsoft/azureiotedge-seeed-image-classifier-python",
+        "tag": {
+            "version": "v2-1.0-224",
+            "platforms": {
+                "arm32v7": "./Dockerfile.arm32v7"
+            }
+        }
+    },
+    "language": "python"
+}

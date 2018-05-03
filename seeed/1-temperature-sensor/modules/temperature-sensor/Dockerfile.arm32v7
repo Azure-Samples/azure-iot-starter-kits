@@ -1,0 +1,7 @@
+FROM microsoft/azureiotedge-seeed-temperature-sensor:1.0-deps-arm32v7
+
+WORKDIR /app
+
+COPY *.py ./
+
+ENTRYPOINT [ "python", "main.py" ]
