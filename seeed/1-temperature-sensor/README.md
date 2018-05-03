@@ -1,6 +1,6 @@
 # temperature-sensor
 
-This project provides a hands-on introduction to Azure IoT Edge by setting up a Raspberry Pi 3 as an Azure IoT Edge device and deploying code to it that sends temperature data to Azure Stream Analytics. This project is designed for developers who have an interest in learning more about Azure IoT Edge capabilities. Code for IoT Edge modules in this project is written in Python.
+This project provides a hands-on introduction to Azure IoT Edge by setting up a Raspberry Pi 3 as an Azure IoT Edge device and deploying code to it that sends temperature data to Azure IoT Hub. This project is designed for developers who have an interest in learning more about Azure IoT Edge capabilities. Code for IoT Edge modules in this project is written in Python.
 
 While this is a proof-of-concept project designed for instructional purposes, it does provide you with a fully functional IoT Edge device that sends temperature data to Azure IoT Hub.
 
@@ -22,7 +22,7 @@ Complete the steps in [Set up your development environment](../SETUP-DEV-ENV.md)
 
 ## Assemble and configure your device
 
-In this project, your Raspberry Pi 3 will be configured as an Azure IoT Edge device that reads from the barometer sensor and sends telemetry to IoT Hub. To prepare your Raspberry Pi 3, you'll need to attached the following components from your Grove Starter Kit for Azure IoT Edge:
+In this project, your Raspberry Pi 3 will be configured as an Azure IoT Edge device that reads from the barometer sensor and sends telemetry to IoT Hub. To prepare your Raspberry Pi 3, you'll need to attach the following components from your Grove Starter Kit for Azure IoT Edge:
 
 - Micro SD card
 - Keyboard and monitor

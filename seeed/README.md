@@ -40,7 +40,7 @@ When deployed to a device, code in the image-classifier project captures video f
 
 1. Attach the required accessories to your Raspberry Pi 3.
 1. Configure your Raspberry Pi 3 as an Azure IoT Edge device.
-1. Modify the code in the project, build images from the containers, and push the images to your own container registry.
+1. Modify the code in the project, build and push the images to your own container registry.
 1. Deploy your modified modules to your device.
 1. Use VS Code to monitor your running modules.
 
@@ -52,7 +52,7 @@ When deployed to a device, code in the speech-recognizer project captures audio 
 
 1. Attach the required accessories to your Raspberry Pi 3.
 1. Configure your Raspberry Pi 3 as an Azure IoT Edge device.
-1. Modify the code in the project, build images from the containers, and push the images to your own container registry.
+1. Modify the code in the project, build and push the images to your own container registry.
 1. Deploy your modified modules to your device.
 1. Iteratively update the code and redeploy.
 
