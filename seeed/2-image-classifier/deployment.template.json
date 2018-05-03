@@ -45,7 +45,7 @@
             "status": "running",
             "restartPolicy": "always",
             "settings": {
-              "image": "${MODULES.image-classifier-csharp.arm32v7}",
+              "image": "${MODULES.image-classifier-python.arm32v7}",
               "createOptions": "{\"ExposedPorts\":{\"8080/tcp\":{}},\"HostConfig\":{\"PortBindings\":{\"8080/tcp\":[{\"HostPort\":\"8080\"}]}}}"
             }
           }
