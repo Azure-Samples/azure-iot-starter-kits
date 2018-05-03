@@ -29,7 +29,7 @@ Instructions below assume that you have completed the physical assembly of your 
         - Select N2 for `Wi-Fi`
         - If prompted for the country, select it from the list
         - Enter the name of the Wi-Fi network you would like to join
-        - **TODO: How to enter password?**
+        - Enter the passphrase for the Wi-Fi network
     - If connecting via ethernet
         - Attach ethernet cable
 1. Set your keyboard layout to the appropriate setting (Raspberry Pi 3 ships with UK layout)

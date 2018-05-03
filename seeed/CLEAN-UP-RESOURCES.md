@@ -1,13 +1,36 @@
-# Clean resources
+# Clean all resources
 
-To delete the modules running on your device, follow the steps in [Delete your Edge deployment](delete-edge-deployment.md).
+If you are finished with projects in this repository, you should clean up all the resources you have created.
 
-To delete the `edgeAgent` and `edgeHub` containers running on your device, execute the following command on your device:
+**NOTE**: Instructions in this document will guide you through deleting IoT Edge resources on your device and associated resources in your Azure account. You should only do this if you are finished with projects in this repository.
 
-`sudo iotedgectl stop`
+1. Delete the IoT Edge runtime on device.
 
-To delete the Azure resources you created (IoT Hub, Edge Device, Container Registry), execute the following command on your laptop:
+    To delete delete running deployments and reset the IoT Edge runtime, execute the following command on your device:
 
-`az group delete --name {resource group name} --no-wait --yes`
+    `sudo iotedgectl uninstall`
 
-It may take several minutes for all resources to be deleted.
+    To delete the `edgeAgent` container on your device, execute the following commands:
+
+    `sudo docker stop edgeAgent`
+    `sudo docker rm edgeAgent`
+
+1. Delete idle Docker images
+
+    To free up space on the SD card for your device, you can delete idle Docker images. To list the images, execute the following command on your device:
+
+    `sudo docker image ls`
+
+    To delete an image, run the following command:
+
+    `sudo docker image rm <IMAGE ID>`
+
+    Repeat the above command for each image you want to delete.
+
+1. Delete Azure resources
+
+    To delete the Azure resources you created (IoT Hub, Edge Device, Container Registry), execute the following command on your laptop:
+
+    `az group delete --name {resource group name} --no-wait --yes`
+
+    It may take several minutes for all resources to be deleted.
