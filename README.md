@@ -1,6 +1,6 @@
 # Azure IoT Starter Kits
 
-This repository contains code and instructions for deploying code to Azure IoT Edge devices. Each project is a proof-of-concept and designed as a learning experience. Projects are specific to a manufacturer's device.
+This repository contains code and instructions for deploying code to Azure IoT starter kits. Each project is a proof-of-concept and designed as a learning experience. Projects are specific to a manufacturer's device.
 
 ## Manufacturers
 
