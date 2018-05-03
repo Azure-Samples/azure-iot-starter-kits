@@ -1,4 +1,4 @@
-# Hands-on Azure IoT Edge
+# Hands-on Grove Starter Kit for Azure IoT Edge
 
 Projects in this repository provide hands-on introductions for setting up the Grove Starter Kit for Azure IoT Edge as an Edge device and deploying code to it that performs example IoT Edge tasks. Each project highlights different tasks and is described in more detail below. (For step-by-step instructions for each project, see each project's README.md file.) While these are proof-of-concept projects designed for instructional purposes, each one provides you with a fully functional IoT Edge device.
 
