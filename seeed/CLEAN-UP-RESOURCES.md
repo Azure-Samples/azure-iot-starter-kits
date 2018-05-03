@@ -2,7 +2,7 @@
 
 To delete the modules running on your device, follow the steps in [Delete your Edge deployment](delete-edge-deployment.md).
 
-To delete the `edgeAgent` and `edgeHub` containers running on your device, exectue the following command on your device:
+To delete the `edgeAgent` and `edgeHub` containers running on your device, execute the following command on your device:
 
 `sudo iotedgectl stop`
 

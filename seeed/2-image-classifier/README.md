@@ -68,7 +68,7 @@ Now get the code and open the solution in VS Code:
 
 ## (OPTIONAL) Deploy pre-built modules to your device
 
-You can deploy pre-built modules (built from the code in this project) to your device by following the steps here: [Deploy pre-built modules][/common/deploy-prebuilt-modules.md]. (If you completed the `1-temperature-sensor` project, you've already deployed pre-built modules. In the next section below, you'll make code changes, build and push containers to your own registry, and deploy those.)
+You can deploy pre-built modules (built from the code in this project) to your device by following the steps here: [Deploy pre-built modules](/common/deploy-prebuilt-modules.md). (If you completed the `1-temperature-sensor` project, you've already deployed pre-built modules. In the next section below, you'll make code changes, build and push containers to your own registry, and deploy those.)
 
 After a few minutes, you should start seeing output on the OLED display similar to this:
 

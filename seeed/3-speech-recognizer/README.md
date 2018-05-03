@@ -33,7 +33,7 @@ After attaching the above components you will boot the Raspberry Pi 3, enable SS
 
 ### Physical assembly
 
-For a video overview of the physical assembly steps, download and watch the following: [Assembling the Rasberry Pi 3 for the speech-recognizer project](https://iotcompanionapp.blob.core.windows.net/videos/speech-recognition-assembly.mp4).
+For a video overview of the physical assembly steps, download and watch the following: [Assembling the Raspberry Pi 3 for the speech-recognizer project](https://iotcompanionapp.blob.core.windows.net/videos/speech-recognition-assembly.mp4).
 
 1. Remove Raspberry Pi 3 (including USB/micro USB power cable) and micro SD card from packaging.
 1. Insert the micro SD card into micro SD card port on the Raspberry Pi 3.
@@ -51,9 +51,9 @@ Complete steps in [Configure your device as an Azure IoT Edge device](../CONFIG-
 
 ## (OPTIONAL) Deploy pre-built modules to your device
 
-You can deploy pre-built modules (built from the code in this project) to your device by following the steps here: [Deploy pre-built modules][/common/deploy-prebuilt-modules.md]. (If you completed the `1-temperature-sensor` project, you've already deployed pre-built modules. In the next section below, you'll make code changes, build and push contianers to your own registry, and deploy those.)
+You can deploy pre-built modules (built from the code in this project) to your device by following the steps here: [Deploy pre-built modules][/common/deploy-prebuilt-modules.md]. (If you completed the `1-temperature-sensor` project, you've already deployed pre-built modules. In the next section below, you'll make code changes, build and push containers to your own registry, and deploy those.)
 
-After the deployment is complete, you can press and hold the button on the Pi HAT, speak into the microphone, and release the button. A respose will be displayed on the OLED display.
+After the deployment is complete, you can press and hold the button on the Pi HAT, speak into the microphone, and release the button. A response will be displayed on the OLED display.
 
 If you deploy pre-built modules, [Delete your deployment](../DELETE-EDGE-DEPLOYMENT.md) before moving on to the next section.
 
@@ -172,7 +172,7 @@ class GoodbyeIntent(Intent):
 
 1. Deploy your modules: In VS Code Explorer, right click `deployment.template.json` and select `Generate IOT Edge Deployment manifest`. This will create a deployment manifest file: `/config/deployment.json`. In the VS Code Explorer, right click the `/config/deployment.json` file and select `Create deployment for Edge device`. In the command palette that opens, select your edge device.
 
-When deployment is complete (after a few minutes), you will see the following messge displayed on the OLED display: "Hold button and speak". Press the button and hold it while you speak. Release the button. In a few seconds you should see a response on the OLED display. The code you have deployed will recognize simple greetings and goodbyes. You can also try phrases like "tell me a joke" or "what time is it" to get interesting responses.
+When deployment is complete (after a few minutes), you will see the following message displayed on the OLED display: "Hold button and speak". Press the button and hold it while you speak. Release the button. In a few seconds you should see a response on the OLED display. The code you have deployed will recognize simple greetings and goodbyes. You can also try phrases like "tell me a joke" or "what time is it" to get interesting responses.
 
 By using the steps above as a guide, you can add more functionality, deploy it quickly (subsequent builds will be much faster), and try it out. Be creative and have fun!
 

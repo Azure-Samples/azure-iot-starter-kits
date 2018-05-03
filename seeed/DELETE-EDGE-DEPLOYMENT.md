@@ -3,7 +3,7 @@
 Follow the steps below to delete the modules deployed to your device:
 
 1. Sign in to the Azure Portal: [https://portal.azure.com](https://portal.azure.com).
-1. Naviagate to your IoT Hub
+1. Navigate to your IoT Hub
 1. Select **Iot Edge (preview)**
 1. Click on your device
 1. Select **Set Modules**
