@@ -49,6 +49,10 @@ Complete steps in [Setup your device](../SETUP-DEVICE.md).
 
 Complete steps in [Configure your device as an Azure IoT Edge device](../CONFIG-EDGE-DEVICE.md).
 
+## Remove idle Docker images
+
+For this scenario, it may be necessary to free up space on the SD card of your device (especially if you have completed the [temperature-sensor](../1-temperature-sensor/README.md) and/or [image-classifier](../2-image-classifier/README.md) projects). To do this, follow the instructions in the **Delete Docker images** section of [Clean resources](../CLEAN-UP-RESOURCES.md).
+
 ## (OPTIONAL) Deploy pre-built modules to your device
 
 You can deploy pre-built modules (built from the code in this project) to your device by following the steps here: [Deploy pre-built modules][/common/deploy-prebuilt-modules.md]. (If you completed the `1-temperature-sensor` project, you've already deployed pre-built modules. In the next section below, you'll make code changes, build and push containers to your own registry, and deploy those.)
