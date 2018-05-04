@@ -43,4 +43,4 @@ For a video overview of these steps, see [Configuring your device as an Azure Io
 - The tool will configure your device and connect it to the SSID that you supplied when running the tool. When this happens, your laptop may automatically connect to your default wireless network.
 - To find the IP address of the device, run `ifconfig` on the device and look for the IP address of the `wlan0` interface. (You should be able to SSH to the device using this address and the default Raspberry Pi 3 credentials.)
 - The following warning can be ignored: `The behavior of this command has been altered by the following extension: azure-cli-iot-ext`. It indicates that the behavior of the `azure-iot-cli-ext` extension is overriding the default behavior for the `az` CLI.
-- Source code for the Azure IoT Starter Kit companion CLI is here [https://github.com/Azure-Samples/azure-iot-starterkit-cli](https://github.com/Azure-Samples/azure-iot-starterkit-cli).
+- Source code for the Azure IoT Starter Kit companion CLI is here: [https://github.com/Azure-Samples/azure-iot-starterkit-cli](https://github.com/Azure-Samples/azure-iot-starterkit-cli).
