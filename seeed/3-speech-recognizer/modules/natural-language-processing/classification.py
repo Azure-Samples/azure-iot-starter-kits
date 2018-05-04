@@ -16,9 +16,7 @@ class Classification(object):
                  config_file = "training_config.json"):
         training_data = load_data(training_data_file)        
         trainer = Trainer(config.load(config_file))
-        trainer.train(training_data)
-        model_directory = trainer.persist('./.projects/default/')
-        self.interpreter = Interpreter.load(model_directory)
+        self.interpreter = trainer.train(training_data)
         self.confidence_threshold = 0.7
 
         # Create supported intents
