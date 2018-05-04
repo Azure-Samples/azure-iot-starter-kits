@@ -66,17 +66,17 @@ If you **HAVE** completed this section in another project, you only need to comp
 
 Now get the code and open the solution in VS Code:
 
-    `git clone git@github.com:Azure-Samples/azure-iot-starter-kits.git`
+`git clone git@github.com:Azure-Samples/azure-iot-starter-kits.git`
 
-    `cd azure-iot-starter-kits/seeed/2-image-classifier`
+`cd azure-iot-starter-kits/seeed/2-image-classifier`
 
-    `code .`
+`code .`
 
 **NOTE**: You will find multiple subdirectories in the cloned repository, each of which contains code for a different Azure IoT Edge project. This document describes how to use the code in the `2-image-classifier` directory. For information about the other projects, see [Hands-on Azure IoT Edge](../README.md).
 
 ## (OPTIONAL) Deploy pre-built modules to your device
 
-You can deploy pre-built modules (built from the code in this project) to your device by following the steps here: [Deploy pre-built modules](/common/deploy-prebuilt-modules.md). (If you completed the `1-temperature-sensor` project, you've already deployed pre-built modules. In the next section below, you'll make code changes, build and push containers to your own registry, and deploy those.)
+You can deploy pre-built modules (built from the code in this project) to your device by following the steps here: [Deploy Modules](../DEPLOY-MODULES.md). (If you completed the `1-temperature-sensor` project, you've already deployed pre-built modules. In the next section below, you'll make code changes, build and push containers to your own registry, and deploy those.)
 
 After a few minutes, you should start seeing output on the OLED display similar to this:
 
@@ -128,9 +128,9 @@ C: planetarium, P: 0.23
 
 You can verify and trouble shoot the deployment by using combinations of the following `docker` commands on the Raspberry Pi 3:
 
-    - `sudo docker ps`
-    - `sudo docker logs -f edgeAgent`
-    - `sudo docker logs -f <container name>`
+`sudo docker ps`
+`sudo docker logs -f edgeAgent`
+`sudo docker logs -f <container name>`
 
 ## Monitor your running code
 
