@@ -2,7 +2,7 @@
 
 [Configuring your device as an Edge device](configure-edge-device.md) started the `edgeAgent` module (running as a Docker container) on the device. The `edgeAgent` has connection information for your IoT Hub, Edge device, and Azure Container Registry. Deploying code to your device requires pushing a deployment manifest (which contains information about which modules a device will run, the routes between modules, etc) to Azure IoT Edge (preview). After you push the deployment manifest to Azure IoT Edge, the `edgeAgent` pulls down the manifest and the specified containers, starts the containers, and routes messages between them.
 
-You can use Visual Studio Code to push configuration changes to Azure IoT Edge (i.e. create an Edge deployment). The configuration you will push references pre-built modules hosted in a public container registry.
+You can use Visual Studio Code to push configuration changes to Azure IoT Edge (i.e. create an Edge deployment). The configuration can reference modules hosted in a public container registry or in a private registry (assuming the `iotedge` runtime was deployed to your device with credentials to the private registry).
 
 1. Sign into your Azure account: In VS Code, press **Command+Shift+P** (Mac) or **Ctrl+Shift+P** (Windows) to open the command palette.  Type and select `Azure: Sign In` and follow the prompts for signing into your Azure account.
 1. Select your Azure subscriptions: In VS Code, press **Command+Shift+P** (Mac) or **Ctrl+Shift+P** (Windows) to open the command palette.  Type and select `Azure: Select Subscriptions` and select the subscriptions you want to use.

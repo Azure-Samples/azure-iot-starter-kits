@@ -114,9 +114,9 @@ In this section you will make a (trivial) code change, build and push modules to
 
 1. Build your modules: In VS Code Explorer, right click the `deployment.template.json` file and select `Build Iot Edge Solution`. This will build the modules in the solution, create images from them, and push them to your registry.
 
-    **NOTE**: This step can take a while as it builds all referenced libraries from source.
+    **NOTE**: This step can take a few minutes as it downloads base images.
 
-1. Deploy your modules: In VS Code Explorer, right click `deployment.template.json` and select `Generate IOT Edge Deployment manifest`. This will create a deployment manifest file: `/config/deployment.json`. In the VS Code Explorer, right click the `/config/deployment.json` file and select `Create deployment for Edge device`. In the command palette that opens, select your edge device. As in the previous section, this will deploy the modules to your device. However, this time the modules will be pulled from *your* container registry.
+1. The previous step created a deployment manifest file: `/config/deployment.json`. In the VS Code Explorer, right click the `/config/deployment.json` file and select `Create deployment for Edge device`. In the command palette that opens, select your edge device. As in the previous section, this will deploy the modules to your device. However, this time the modules will be pulled from *your* container registry.
 
 After a few minutes, you should start seeing output on the OLED display similar to this:
 

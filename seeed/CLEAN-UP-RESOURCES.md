@@ -13,6 +13,7 @@ If you are finished with projects in this repository, you should clean up all th
     To delete the `edgeAgent` container on your device, execute the following commands:
 
     `sudo docker stop edgeAgent`
+
     `sudo docker rm edgeAgent`
 
 1. Delete idle Docker images
@@ -29,7 +30,7 @@ If you are finished with projects in this repository, you should clean up all th
 
 1. Delete Azure resources
 
-    To delete the Azure resources you created (IoT Hub, Edge Device, Container Registry), execute the following command on your laptop:
+    To delete the Azure resources you created (Resource Group, IoT Hub, Edge Device, Container Registry), execute the following command on your laptop:
 
     `az group delete --name {resource group name} --no-wait --yes`
 
