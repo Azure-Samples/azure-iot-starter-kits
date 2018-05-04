@@ -22,7 +22,7 @@ Complete the steps in [Set up your development environment](../SETUP-DEV-ENV.md)
 
 ## Assemble and configure your device
 
-In this project, your Raspberry Pi 3 will be configured as an Azure IoT Edge device that captures audio from a video stream and classifies objects in the captured images. To prepare your Raspberry Pi 3, you'll need to attach the following components from your Grove Starter Kit for Azure IoT Edge:
+In this project, your Raspberry Pi 3 will be configured as an Azure IoT Edge device that captures speech from the Pi microphone, uses an AI module to recognize the speech and determine intent, and respond with an appropriate response on the OLED display. To prepare your Raspberry Pi 3, you'll need to attach the following components from your Grove Starter Kit for Azure IoT Edge:
 
 - Micro SD card
 - Keyboard and monitor
@@ -59,7 +59,7 @@ If you **HAVE** completed this section in another project, you only need to comp
 
 ## (OPTIONAL) Deploy pre-built modules to your device
 
-You can deploy pre-built modules (built from the code in this project) to your device by following the steps here: [Deploy pre-built modules][/common/deploy-prebuilt-modules.md]. (If you completed the `1-temperature-sensor` project, you've already deployed pre-built modules. In the next section below, you'll make code changes, build and push containers to your own registry, and deploy those.)
+You can deploy pre-built modules (built from the code in this project) to your device by following the steps here: [Deploy pre-built modules][../DEPLOY-MODULES.md]. (If you completed the `1-temperature-sensor` project, you've already deployed pre-built modules. In the next section below, you'll make code changes, build and push containers to your own registry, and deploy those.)
 
 After the deployment is complete, you can press and hold the button on the Pi HAT, speak into the microphone, and release the button. A response will be displayed on the OLED display.
 
@@ -100,7 +100,7 @@ class GoodbyeCommand(Command):
         return(random.choice(self.goodbyes))
 ```
 
-    Save the file.
+Save the file.
 
 1. Edit `natural-language-processing/intent.py`: Add the following to the end of the file:
 
@@ -110,7 +110,7 @@ class GoodbyeIntent(Intent):
         self.commands.append(command.GoodbyeCommand())
 ```
 
-    Save the file.
+Save the file.
 
 1. Edit `natural-language-processing/classification.py`: Add the following intent to the `self.intents` object in the `__init__` method:
 
@@ -118,7 +118,7 @@ class GoodbyeIntent(Intent):
     "goodbye"     : intent.GoodbyeIntent(self, context)
 ```
 
-    Save the file.
+Save the file.
 
 1. Edit `natural-language-processing/training_data.json`: Add the following JSON to the file:
 
@@ -160,7 +160,7 @@ class GoodbyeIntent(Intent):
 }
 ```
 
-    Save the file.
+Save the file.
 
 1. Edit the `module.json` file for each of the 2 project modules: Replace the public registry name with your registry name. For example, in the `speech-to-text` module, update the following line in the `module.json` file:
 

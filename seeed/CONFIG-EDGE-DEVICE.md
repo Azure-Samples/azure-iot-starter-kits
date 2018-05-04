@@ -32,10 +32,12 @@ For a video overview of these steps, see [Configuring your device as an Azure Io
 
 - Your laptop must be connected to the internet when you initially run the tool.
 - The first two items you will be prompted for are SSID and Password. These are the SSID and password of the wireless network that the device will connect to after it is configured as an edge device.
-- You will be prompted to create a new (or select an existing) Azure Resource Group, Azure IoT Hub, and Azure IoT Edge device.
+- You will be prompted to create a new (or select an existing) Azure Resource Group, Azure IoT Hub, and Azure IoT Edge device, and Azure Container Registry (ACR).
 - You can bypass options by providing information in options. For example, if you know the name of the resource group and IoT Hub that you want to target, you can run a command similar to this:
 
     `iot --resource-group {resource group name} --iothub {IoT Hub name} configure_device`
+
+    Or, you can simply provide the name of an existing resource when prompted.
 
 - After the tool finishes creating Azure resources (or getting necessary information from existing Azure resources), you will be prompted to connect to the SSID of your device.
 - The tool will configure your device and connect it to the SSID that you supplied when running the tool. When this happens, your laptop may automatically connect to your default wireless network.
