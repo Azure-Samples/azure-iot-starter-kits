@@ -16,8 +16,7 @@ class Classification(object):
                  config_file = "training_config.json"):
         training_data = load_data(training_data_file)        
         trainer = Trainer(config.load(config_file))
-        for i in range(5):
-            trainer.train(training_data)
+        trainer.train(training_data)
         model_directory = trainer.persist('./.projects/default/')
         self.interpreter = Interpreter.load(model_directory)
         self.confidence_threshold = 0.7
