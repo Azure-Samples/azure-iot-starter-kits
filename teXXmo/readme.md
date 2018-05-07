@@ -1,6 +1,6 @@
 # Hands-on teXXmo button Starter Kit for Azure IoT
 
-The teXXmo button is an Azure IoT Starter kit that allows you to send predefiened messages to your cloud by a click of the button.  
+The teXXmo button is an Azure IoT Starter kit that allows you to send predefined messages to your cloud by a click of the button.  
 
 This page contains information to help you get familiar with the Azure IoT Starter Kit – teXXmo button.  You will find the resources required to configure the Azure IoT Starter kit to connect to an Azure subscription and invoke an Azure Function.
 
