@@ -1,10 +1,10 @@
 # Hands-on Grove Starter Kit for Azure IoT Edge
 
-Projects in this repository provide hands-on introductions for setting up the Grove Starter Kit for Azure IoT Edge as an Edge device and deploying code to it that performs example IoT Edge tasks. Each project highlights different tasks and is described in more detail below. (For step-by-step instructions for each project, see each project's README.md file.) While these are proof-of-concept projects designed for instructional purposes, each one provides you with a fully functional IoT Edge device.
+![](https://catalogstorageprod.blob.core.windows.net/devicecatalogimageserver/2d78c72d9c3144a983434712f37ee830_SEEED%20Kit.JPG)
+
+Projects in this repository provide hands-on introductions for setting up the [Grove Starter Kit for Azure IoT Edge](https://catalog.azureiotsuite.com/details?title=Grove-Starter-Kit-for-Azure-IoT-Edge&source=home-page) as an Edge device and deploying code to it that performs example IoT Edge tasks. Each project highlights different tasks and is described in more detail below. (For step-by-step instructions for each project, see each project's README.md file.) While these are proof-of-concept projects designed for instructional purposes, each one provides you with a fully functional IoT Edge device.
 
 Projects in this repository are designed for developers who have an interest in learning more about Azure IoT Edge. Code for IoT Edge modules in these projects is written in Python.
-
-Projects in this repository have adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/). For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
 
 ## Concepts
 
@@ -57,3 +57,6 @@ When deployed to a device, code in the speech-recognizer project captures audio 
 1. Iteratively update the code and redeploy.
 
 For step-by-step instructions, see [speech-recognizer README.md](3-speech-recognizer/README.md).
+
+---
+Projects in this repository have adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/). For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
