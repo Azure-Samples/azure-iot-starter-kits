@@ -66,7 +66,7 @@ If you **HAVE** completed this section in another project, you only need to comp
 
 Now get the code and open the solution in VS Code:
 
-`git clone git@github.com:Azure-Samples/azure-iot-starter-kits.git`
+`git clone https://github.com/Azure-Samples/azure-iot-starter-kits.git`
 
 `cd azure-iot-starter-kits/seeed/2-image-classifier`
 
