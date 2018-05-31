@@ -11,15 +11,15 @@ You may use your Raspberry Pi 3 with WiFi only, Ethernet only, or both WiFi and 
     When boot is complete, you can see IP Address of your Raspberry Pi 3 on the screen.
     
     Example
-        My IP address is `*.*.*.*`
-        [  OK  ] Started Session c1 of user root.
-        Starting User Manager for UID 0...
-        [  OK  ] Started /etc/rc.local Compatibility.
-        Starting Terminate Plymouth Boot Screen...
-        Starting Hold until boot process finishes up...
-
-        Raspbian GNU/Linux 9 raspberrypi tty1
-        raspberrypi login:
+        My IP address is `*.*.*.*`  
+        [  OK  ] Started Session c1 of user root.  
+        Starting User Manager for UID 0...  
+        [  OK  ] Started /etc/rc.local Compatibility.  
+        Starting Terminate Plymouth Boot Screen...  
+        Starting Hold until boot process finishes up...  
+          
+        Raspbian GNU/Linux 9 raspberrypi tty1  
+        raspberrypi login:  
 
     You can also find the IP address of the device, run `ifconfig` on the device and look for the IP address of the `wlan0` interface for WiFi and the `eth0` interface for Ethernet. (You should be able to SSH to the device using this address and the default Raspberry Pi 3 credentials.)
 
