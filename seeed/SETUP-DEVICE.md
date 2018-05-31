@@ -7,10 +7,12 @@ You may use your Raspberry Pi 3 with WiFi only, Ethernet only, or both WiFi and 
 
 * Using Eternet  
 
-    Please make sure your netowrk address is not 192.168.4.x subnet.  The Raspberry Pi 3 is preconfigured with 192.168.4.1 WiFi Access Point.
+    **NOTE**: Please make sure your netowrk address is not 192.168.4.x subnet.  The Raspberry Pi 3 is preconfigured with 192.168.4.1 WiFi Access Point.  
+
     When boot is complete, you can see IP Address of your Raspberry Pi 3 on the screen.
     
     Example
+    
         My IP address is `*.*.*.*`  
         [  OK  ] Started Session c1 of user root.  
         Starting User Manager for UID 0...  
