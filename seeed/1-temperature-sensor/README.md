@@ -12,7 +12,7 @@ You will need the following hardware to complete this project:
 
 - A laptop (**Note**: The instructions in this document have been tested on Mac and Windows.)
 - The Grove Starter Kit for Azure IoT Edge
-- A Raspberry Pi 3
+- A 5V Power Supplly with Micro USB interface
 - A monitor + HDMI cable
 - A keyboard with USB interface
 
@@ -22,24 +22,23 @@ Complete the steps in [Set up your development environment](../SETUP-DEV-ENV.md)
 
 ## Assemble and configure your device
 
-In this project, your Raspberry Pi 3 will be configured as an Azure IoT Edge device that reads from the barometer sensor and sends telemetry to IoT Hub. To prepare your Raspberry Pi 3, you'll need to attach the following components from your Grove Starter Kit for Azure IoT Edge:
+In this project, your Raspberry Pi 3 will be configured as an Azure IoT Edge device that reads from the Temp & Humidity & Barometer sensor and sends telemetry to IoT Hub. To prepare your Raspberry Pi 3, you'll need to attach the following components from your Grove Starter Kit for Azure IoT Edge:
 
 - Micro SD card
 - Keyboard and monitor
-- Raspberry Pi 3 compatible barometer sensor (BME280)
-- ReSpeaker 2-Mics Pi HAT
+- Grove - Temp & Humidity & Barometer Sensor (BME280)
+- ReSpeaker 4-Mic Array for Raspberry Pi
+- A 5V Power Supplly with Micro USB interface
 
-After attaching the above components you will boot the Raspberry Pi 3, enable SSH connectivity, and enable the barometer interface. Step-by-step instructions are below.
+After attaching the above components you will boot the Raspberry Pi 3 and enable the barometer interface. Step-by-step instructions are below.
 
 ### Physical assembly
-
-For a video overview of the physical assembly steps, download and watch the following: [Assembling the Raspberry Pi 3 for the temperature-sensor project](https://iotcompanionapp.blob.core.windows.net/videos/temp-sensor-assembly.mp4).
 
 1. Remove Raspberry Pi 3 (including USB/micro USB power cable) and micro SD card from packaging.
 1. Insert the micro SD card into micro SD card port on the Raspberry Pi 3.
 1. Attach the keyboard (via one of the USB ports) and monitor (via HDMI port) to the Raspberry Pi 3.
-1. Remove ReSpeaker 2-Mics Pi HAT from its packaging and attach it to the Raspberry Pi 3 via the GPIO (general-purpose input/output) pins along the top edge of the board.
-1. Remove the barometer sensor from its packaging and attach it to the port labeled `I2C` on the ReSpeaker 2-Mics Pi HAT.
+1. Remove ReSpeaker 4-Mic Array for Raspberry Pi from its packaging and attach it to the Raspberry Pi 3 via the 40-Pin Headers along the top edge of the board.
+1. Remove the barometer sensor from its packaging and attach it to the port labeled `I2C` on the ReSpeaker 4-Mic Array for Raspberry Pi.
 
 ### Setup device
 
