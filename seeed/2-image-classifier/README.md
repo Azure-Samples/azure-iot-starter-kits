@@ -12,7 +12,7 @@ You will need the following hardware to complete this project:
 
 - A laptop (**Note**: The instructions in this document have been tested on Mac and Windows.)
 - The Grove Starter Kit for Azure IoT Edge
-- A 5V Power Supplly with Micro USB interface
+- A 5V Power Supply with Micro USB interface
 - A monitor + HDMI cable
 - A keyboard with USB interface
 
@@ -29,7 +29,7 @@ In this project, your Raspberry Pi 3 will be configured as an Azure IoT Edge dev
 - Raspberry Pi Camera Module V2
 - ReSpeaker 4-Mic Array for Raspberry Pi
 - Grove - OLED Display 0.96''
-- A 5V Power Supplly with Micro USB interface
+- A 5V Power Supply with Micro USB interface
 
 After attaching the above components you will boot the Raspberry Pi 3, enable SSH connectivity, and enable the camera interface. Step-by-step instructions are below.
 
