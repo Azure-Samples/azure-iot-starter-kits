@@ -28,7 +28,7 @@ In this project, your Raspberry Pi 3 will be configured as an Azure IoT Edge dev
 - Keyboard and monitor
 - Raspberry Pi Camera Module V2
 - ReSpeaker 4-Mic Array for Raspberry Pi
-- Grove - OLED Display 0.96''
+- Grove - OLED Display 0.96"
 - A 5V Power Supply with Micro USB interface
 
 After attaching the above components you will boot the Raspberry Pi 3, enable SSH connectivity, and enable the camera interface. Step-by-step instructions are below.
