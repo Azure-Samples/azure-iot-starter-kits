@@ -12,7 +12,7 @@ You will need the following hardware to complete this project:
 
 - A laptop (**Note**: The instructions in this document have been tested on Mac and Windows.)
 - The Grove Starter Kit for Azure IoT Edge
-- A 5V Power Supplly with Micro USB interface
+- A 5V Power Supply with Micro USB interface
 - A monitor + HDMI cable
 - A keyboard with USB interface
 
