@@ -87,7 +87,7 @@ class MicrophoneThread(threading.Thread):
         index = 0
         for i in range(p.get_device_count()):
             di = p.get_device_info_by_index(i)
-            if di['name'].startswith('seeed-2mic-voicecard'):
+            if di['name'].startswith('seeed-4mic-voicecard'):
                 return di['index']
             if di['name'] == 'default':
                 index = i

@@ -18,9 +18,18 @@ For a video overview of these steps, see [Configuring your device as an Azure Io
 
     Follow the prompts to create or select Azure resources, then connect to the SSID of your device to allow the CLI to run the necessary configuration scripts.
 
+    Default Wi-Fi setting of Raspberry Pi:  
+    SSID : `SeeedGroveKit`      
+    Passphase : `SeeedGroveKit`  
+
     **NOTE**: One Azure resource that the Azure IoT Starter Kit companion CLI will create or select is an Azure IoT Hub. If you choose to create a new Azure IoT Hub (you can choose not to by giving the name of an existing IoT Hub), the default SKU is `F1` (Free). This SKU is limited to one per subscription. If you have used the `F1` SKU for an existing IoT Hub, you can choose a different SKU (`S1`, `S2`, `S3`) by using the `--iothub-sku` flag. For example: `iot --iothub-sku S1 configure_device`.
 
-1. After the Azure IoT Starter Kit companion CLI has connected to your device, you can run `tail -f ~/connect.log` on your device to follow the configuration progress. You'll know the configuration is complete when you see this message in the log:
+    **NOTE**: If you are using ethernet to connect to your Raspberry Pi 3, please specify IP Address of your Raspberry Pi 3 by using `--device-ip`
+    To find the IP address of the device, run `ifconfig` on the device and look for the IP address of the `wlan0` interface for WiFi and the `eth0` interface for Ethernet. (You should be able to SSH to the device using this address and the default Raspberry Pi 3 credentials.)  
+    For example : `iot --device-ip 12.168.1.10 configure_device`  
+
+1. After the Azure IoT Starter Kit companion CLI has connected to your Raspberry Pi 3, you can run `tail -f ~/connect.log` on your Raspberry Pi 3 to follow the configuration progress.  You can run the command in console or through SSH.    
+You'll know the configuration is complete when you see this message in the log:
 
         Sending tags: {"status":"Completed"}
 
@@ -31,7 +40,8 @@ For a video overview of these steps, see [Configuring your device as an Azure Io
     `iot --help configure_device`
 
 - Your laptop must be connected to the internet when you initially run the tool.
-- The first two items you will be prompted for are SSID and Password. These are the SSID and password of the wireless network that the device will connect to after it is configured as an edge device.
+- The first two items you will be prompted for are SSID and Password. These are the SSID and password of the wireless network that the device will connect to after it is configured as an edge device.  
+
 - You will be prompted to create a new (or select an existing) Azure Resource Group, Azure IoT Hub, and Azure IoT Edge device, and Azure Container Registry (ACR).
 - You can bypass options by providing information in options. For example, if you know the name of the resource group and IoT Hub that you want to target, you can run a command similar to this:
 
@@ -40,7 +50,7 @@ For a video overview of these steps, see [Configuring your device as an Azure Io
     Or, you can simply provide the name of an existing resource when prompted.
 
 - After the tool finishes creating Azure resources (or getting necessary information from existing Azure resources), you will be prompted to connect to the SSID of your device.
-- The tool will configure your device and connect it to the SSID that you supplied when running the tool. When this happens, your laptop may automatically connect to your default wireless network.
-- To find the IP address of the device, run `ifconfig` on the device and look for the IP address of the `wlan0` interface. (You should be able to SSH to the device using this address and the default Raspberry Pi 3 credentials.)
+- The tool will configure your device and connect it to the SSID that you supplied when running the tool. When this happens, your laptop may automatically connect to your default wireless network.  
+
 - The following warning can be ignored: `The behavior of this command has been altered by the following extension: azure-cli-iot-ext`. It indicates that the behavior of the `azure-iot-cli-ext` extension is overriding the default behavior for the `az` CLI.
 - Source code for the Azure IoT Starter Kit companion CLI is here: [https://github.com/Azure-Samples/azure-iot-starterkit-cli](https://github.com/Azure-Samples/azure-iot-starterkit-cli).
