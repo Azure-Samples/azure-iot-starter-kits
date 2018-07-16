@@ -15,7 +15,7 @@ class MicrophoneThread(threading.Thread):
     WIDTH = 2
     CHANNELS = 1 # 1 for mono, 2 for stereo, 4 for ReSpeaker quad array
     RESAMPLE_RATIO = float(TARGET_RATE) / float(SAMPLE_RATE)
-    BUTTON = 17
+    BUTTON = 12
 
     def __init__(self, callback):
         threading.Thread.__init__(self, target=self.run)
@@ -53,7 +53,7 @@ class MicrophoneThread(threading.Thread):
         audio_frames = array.array('h')
         while not self.stopped():
             # Capture audio while the button is held.
-            if not GPIO.input(self.BUTTON):
+            if GPIO.input(self.BUTTON):
                 if len(audio_frames) == 0:
                     print("Listening ...")
 
