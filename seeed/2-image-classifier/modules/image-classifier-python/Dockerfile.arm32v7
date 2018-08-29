@@ -4,7 +4,7 @@ WORKDIR /app
 
 # Download model
 RUN mkdir /model \
-    && apt-get install -y wget \
+    && apt-get update && apt-get install -y wget \
     && wget https://storage.googleapis.com/mobilenet_v2/checkpoints/mobilenet_v2_1.0_224.tgz \
     && wget https://raw.githubusercontent.com/tensorflow/models/master/research/inception/inception/data/imagenet_lsvrc_2015_synsets.txt -O /model/imagenet_lsvrc_2015_synsets.txt \
     && wget https://raw.githubusercontent.com/tensorflow/models/master/research/inception/inception/data/imagenet_metadata.txt -O /model/imagenet_metadata.txt \
