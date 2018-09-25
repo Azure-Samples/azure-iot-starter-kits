@@ -11,7 +11,7 @@ import io
 import devicecheck
 import hubmanager
 import oleddisplay
-from iothub_client import IoTHubMessage
+from iothub_client import IoTHubModuleClient, IoTHubMessage
 
 oled_display = None
 hub = None
@@ -54,8 +54,8 @@ def send_confirmation_callback(message, result, user_context):
     print("Confirmation received with result: {} message: {}\n".format(result, user_context))
 
 
-# device_twin_callback is invoked when twin's desired properties are updated.
-def device_twin_callback(update_state, payload, user_context):
+# module_twin_callback is invoked when twin's desired properties are updated.
+def module_twin_callback(update_state, payload, user_context):
     global IMAGE_CLASSIFY_THRESHOLD
 
     print("\nTwin callback called with:\nupdateStatus = {}\npayload = {}".format(update_state, payload))
@@ -77,7 +77,7 @@ if __name__ == '__main__':
 
     # Create the IoT Edge connection.
     hub = hubmanager.HubManager()
-    hub.client.set_device_twin_callback(device_twin_callback, 0)
+    hub.client.set_module_twin_callback(module_twin_callback, 0)
 
     # Create the camera object and start camera stream.
     camera = picamera.PiCamera()

@@ -1,0 +1,5 @@
+azure-iothub-device-client
+flask
+luma.oled
+smbus2
+tensorflow

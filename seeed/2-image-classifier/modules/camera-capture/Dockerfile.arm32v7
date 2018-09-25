@@ -1,8 +1,41 @@
-FROM microsoft/azureiotedge-seeed-camera-capture:1.0-deps-arm32v7
+FROM resin/raspberrypi3-debian:stretch
+
+RUN [ "cross-build-start" ]
+
+# Install dependencies
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    build-essential \
+    libboost-python1.62-dev \
+    libcurl4-openssl-dev \
+    libffi-dev \
+    libfreetype6-dev \
+    libjpeg-dev \
+    libpulse-dev \
+    libssl-dev \
+    libopenjp2-7-dev \
+    python3-dev \
+    python-picamera \
+    python3-picamera \
+    python-pil \
+    python3-pip \
+    python-requests \
+    python-setuptools \
+    python-smbus \
+    python-wheel \
+    swig \
+    zlib1g-dev
+
+COPY requirements.txt ./
+
+RUN pip3 install --upgrade pip 
+RUN pip install --upgrade setuptools 
+RUN pip3 install -r requirements.txt
 
 WORKDIR /app
 
 COPY fonts/. ./fonts/
 COPY *.py ./
 
-ENTRYPOINT [ "python", "main.py" ]
+RUN [ "cross-build-end" ]  
+
+ENTRYPOINT [ "python3", "-u", "./main.py" ]

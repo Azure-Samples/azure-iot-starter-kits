@@ -1,4 +1,37 @@
-FROM microsoft/azureiotedge-seeed-image-classifier-python:1.0-deps-arm32v7
+FROM resin/raspberrypi3-debian:stretch
+
+RUN [ "cross-build-start" ]
+
+ENV PYTHONUNBUFFERED=1
+
+# Install dependencies
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    build-essential \
+    libboost-python1.62.0 \
+    libcurl4-openssl-dev \
+    libopenjp2-7-dev \
+    libffi-dev \
+    libatlas-base-dev \
+    libfreetype6-dev \
+    libjpeg-dev \
+    libpulse-dev \
+    libssl-dev \
+    python3-dev \
+    python-pil \
+    python3-pip \
+    python-requests \
+    python-setuptools \
+    python-smbus \
+    python-wheel \
+    python3-numpy \
+    swig \
+    zlib1g-dev
+
+COPY requirements.txt ./
+
+RUN pip3 install --upgrade pip 
+RUN pip3 install --upgrade setuptools 
+RUN pip3 install -r requirements.txt
 
 WORKDIR /app
 
@@ -13,4 +46,6 @@ RUN mkdir /model \
 
 COPY *.py ./
 
-ENTRYPOINT [ "python", "main.py" ]
+RUN [ "cross-build-end" ]  
+
+ENTRYPOINT [ "python3", "-u", "./main.py" ]

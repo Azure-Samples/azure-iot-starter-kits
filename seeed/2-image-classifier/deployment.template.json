@@ -7,14 +7,21 @@
           "type": "docker",
           "settings": {
             "minDockerVersion": "v1.25",
-            "loggingOptions": ""
+            "loggingOptions": "",
+            "registryCredentials": {
+              "registryName": {
+                "username": "$CONTAINER_REGISTRY_USERNAME",
+                "password": "$CONTAINER_REGISTRY_PASSWORD",
+                "address": "$CONTAINER_REGISTRY_ADDRESS"
+              }
+            }
           }
         },
         "systemModules": {
           "edgeAgent": {
             "type": "docker",
             "settings": {
-              "image": "microsoft/azureiotedge-agent:1.0-preview",
+              "image": "mcr.microsoft.com/azureiotedge-agent:1.0.2",
               "createOptions": ""
             }
           },
@@ -23,14 +30,19 @@
             "status": "running",
             "restartPolicy": "always",
             "settings": {
-              "image": "microsoft/azureiotedge-hub:1.0-preview",
+              "image": "mcr.microsoft.com/azureiotedge-hub:1.0.2", 
               "createOptions": ""
+            },
+            "env": { 
+              "OptimizeForPerformance": { 
+                "value": "false" 
+              }
             }
           }
         },
         "modules": {
           "camera-capture": {
-            "version": "1.0",
+            "version": "1.1",
             "type": "docker",
             "status": "running",
             "restartPolicy": "always",
@@ -40,7 +52,7 @@
             }
           },
           "image-classifier": {
-            "version": "1.0",
+            "version": "1.1",
             "type": "docker",
             "status": "running",
             "restartPolicy": "always",
