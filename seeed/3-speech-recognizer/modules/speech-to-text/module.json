@@ -2,9 +2,9 @@
     "$schema-version": "0.0.1",
     "description": "",
     "image": {
-        "repository": "microsoft/azureiotedge-seeed-speech-to-text",
+        "repository": "$CONTAINER_REGISTRY_ADDRESS/azureiotedge-seeed-speech-to-text",
         "tag": {
-            "version": "1.0",
+            "version": "1.0.2",
             "platforms": {
                 "arm32v7": "./Dockerfile.arm32v7"
             }
