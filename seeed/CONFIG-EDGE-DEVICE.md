@@ -14,7 +14,7 @@ For a video overview of these steps, see [Configuring your device as an Azure Io
 
 1. Use the Azure IoT Starter Kit companion CLI to configure your device:
 
-    `iot configure_device`
+    `iot configure-device`
 
     Follow the prompts to create or select Azure resources, then connect to the SSID of your device to allow the CLI to run the necessary configuration scripts.
 
@@ -35,9 +35,9 @@ You'll know the configuration is complete when you see this message in the log:
 
 **NOTES on IOT CLI usage**:
 
-- Options must be passed *before* the command. For example, to see help for the `configure_device` command, run the following:
+- Options must be passed *before* the command. For example, to see help for the `configure-device` command, run the following:
 
-    `iot --help configure_device`
+    `iot --help configure-device`
 
 - Your laptop must be connected to the internet when you initially run the tool.
 - The first two items you will be prompted for are SSID and Password. These are the SSID and password of the wireless network that the device will connect to after it is configured as an edge device.  
