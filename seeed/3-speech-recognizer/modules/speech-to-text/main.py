@@ -7,7 +7,7 @@ import devicecheck
 import hubmanager
 import mic
 import oleddisplay
-from iothub_client import IoTHubClient, IoTHubMessage
+from iothub_client import IoTHubModuleClient, IoTHubMessage
 
 
 oled_display = None
