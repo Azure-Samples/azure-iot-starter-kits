@@ -31,7 +31,7 @@
             "restartPolicy": "always",
             "settings": {
               "image": "mcr.microsoft.com/azureiotedge-hub:1.0.2", 
-              "createOptions": ""
+              "createOptions": "{\"HostConfig\":{\"PortBindings\":{\"5671/tcp\":[{\"HostPort\":\"5671\"}], \"8883/tcp\":[{\"HostPort\":\"8883\"}],\"443/tcp\":[{\"HostPort\":\"443\"}]}}}"
             },
             "env": { 
               "OptimizeForPerformance": { 
