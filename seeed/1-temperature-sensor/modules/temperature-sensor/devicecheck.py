@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-import smbus
+import smbus2
 
 
 def check_for_bme280():
@@ -11,7 +11,7 @@ def check_for_bme280():
 
 
 def look_for_device_address(address):
-    bus = smbus.SMBus(1)
+    bus = smbus2.SMBus(1)
     is_device_found = False
 
     for device in range(128):
