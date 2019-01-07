@@ -22,11 +22,11 @@ For a video overview of these steps, see [Configuring your device as an Azure Io
     SSID : `SeeedGroveKit`      
     Passphase : `SeeedGroveKit`  
 
-    **NOTE**: One Azure resource that the Azure IoT Starter Kit companion CLI will create or select is an Azure IoT Hub. If you choose to create a new Azure IoT Hub (you can choose not to by giving the name of an existing IoT Hub), the default SKU is `F1` (Free). This SKU is limited to one per subscription. If you have used the `F1` SKU for an existing IoT Hub, you can choose a different SKU (`S1`, `S2`, `S3`) by using the `--iothub-sku` flag. For example: `iot --iothub-sku S1 configure_device`.
+    **NOTE**: One Azure resource that the Azure IoT Starter Kit companion CLI will create or select is an Azure IoT Hub. If you choose to create a new Azure IoT Hub (you can choose not to by giving the name of an existing IoT Hub), the default SKU is `F1` (Free). This SKU is limited to one per subscription. If you have used the `F1` SKU for an existing IoT Hub, you can choose a different SKU (`S1`, `S2`, `S3`) by using the `--iothub-sku` flag. For example: `iot --iothub-sku S1 configure-device`.
 
     **NOTE**: If you are using ethernet to connect to your Raspberry Pi 3, please specify IP Address of your Raspberry Pi 3 by using `--device-ip`
     To find the IP address of the device, run `ifconfig` on the device and look for the IP address of the `wlan0` interface for WiFi and the `eth0` interface for Ethernet. (You should be able to SSH to the device using this address and the default Raspberry Pi 3 credentials.)  
-    For example : `iot --device-ip 12.168.1.10 configure_device`  
+    For example : `iot --device-ip 12.168.1.10 configure-device`  
 
 1. After the Azure IoT Starter Kit companion CLI has connected to your Raspberry Pi 3, you can run `tail -f ~/connect.log` on your Raspberry Pi 3 to follow the configuration progress.  You can run the command in console or through SSH.    
 You'll know the configuration is complete when you see this message in the log:
@@ -45,7 +45,7 @@ You'll know the configuration is complete when you see this message in the log:
 - You will be prompted to create a new (or select an existing) Azure Resource Group, Azure IoT Hub, and Azure IoT Edge device, and Azure Container Registry (ACR).
 - You can bypass options by providing information in options. For example, if you know the name of the resource group and IoT Hub that you want to target, you can run a command similar to this:
 
-    `iot --resource-group {resource group name} --iothub {IoT Hub name} configure_device`
+    `iot --resource-group {resource group name} --iothub {IoT Hub name} configure-device`
 
     Or, you can simply provide the name of an existing resource when prompted.
 
