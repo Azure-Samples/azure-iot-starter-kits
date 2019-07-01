@@ -8,7 +8,7 @@ def check_for_oled():
     is_oled_found = look_for_device_address(oled_device_address)
 
     return is_oled_found
-   
+
 
 def look_for_device_address(address):
     bus = smbus.SMBus(1)

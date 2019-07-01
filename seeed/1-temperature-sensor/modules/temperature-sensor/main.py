@@ -25,11 +25,13 @@ def stream_sensor_data(hub_client, bme280_sensor):
 
     while True:
         sensor_data = bme280_sensor.get_sample()
-        json_sensor_data = json.dumps(sensor_data, default=lambda o: o.__dict__)
+        json_sensor_data = json.dumps(
+            sensor_data, default=lambda o: o.__dict__)
 
         if BME280_SEND_ENABLED:
             COUNTER = COUNTER + 1
-            print("Sending message: {}, Body: {}".format(COUNTER, json_sensor_data))
+            print("Sending message: {}, Body: {}".format(
+                COUNTER, json_sensor_data))
 
             message = IoTHubMessage(json_sensor_data)
             hub_client.send_event_async(
@@ -39,7 +41,8 @@ def stream_sensor_data(hub_client, bme280_sensor):
 
 
 def send_confirmation_callback(message, result, user_context):
-    print("Confirmation[{}] received with result: {}".format(user_context, result))
+    print("Confirmation[{}] received with result: {}".format(
+        user_context, result))
 
 
 # module_twin_callback is invoked when twin's desired properties are updated.
@@ -47,7 +50,8 @@ def module_twin_callback(update_state, payload, user_context):
     global BME280_SEND_ENABLED
     global BME280_SEND_INTERVAL_SECONDS
 
-    print("\nTwin callback called with:\nupdateStatus = {}\npayload = {}".format(update_state, payload))
+    print("\nTwin callback called with:\nupdateStatus = {}\npayload = {}".format(
+        update_state, payload))
     data = json.loads(payload)
     if "desired" in data:
         data = data["desired"]

@@ -8,9 +8,10 @@ from iothub_client import IoTHubModuleClient, IoTHubClientError, IoTHubTransport
 # By default, messages do not expire.
 MESSAGE_TIMEOUT = 10000
 
+
 class HubManager(object):
 
-    def __init__(self, protocol = IoTHubTransportProvider.MQTT):
+    def __init__(self, protocol=IoTHubTransportProvider.MQTT):
 
         print("\nPython %s\n" % sys.version)
         print("IoT Hub Client for Python")

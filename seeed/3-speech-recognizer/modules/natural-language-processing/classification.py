@@ -1,34 +1,32 @@
+import intent
+from rasa_nlu import config
+from rasa_nlu.model import Trainer, Metadata, Interpreter
+from rasa_nlu.config import RasaNLUModelConfig
+from rasa_nlu.training_data import load_data
 import sys
-if sys.version_info < (3,0):
+if sys.version_info < (3, 0):
     import urllib as decoder
 else:
     import urllib.parse as decoder
 
-from rasa_nlu.training_data import load_data
-from rasa_nlu.config import RasaNLUModelConfig
-from rasa_nlu.model import Trainer, Metadata, Interpreter
-from rasa_nlu import config
-
-import intent
 
 class Classification(object):
-    def __init__(self, training_data_file = "training_data.json",
-                 config_file = "training_config.json"):
-        training_data = load_data(training_data_file)        
+    def __init__(self, training_data_file="training_data.json",
+                 config_file="training_config.json"):
+        training_data = load_data(training_data_file)
         trainer = Trainer(config.load(config_file))
         self.interpreter = trainer.train(training_data)
         self.confidence_threshold = 0.7
 
         # Create supported intents
-        context = { 'confidence_threshold': self.confidence_threshold }
+        context = {'confidence_threshold': self.confidence_threshold}
         self.intents = {
-                "greet"     : intent.HelloIntent(self, context),
-                "get_time"  : intent.GetTimeIntent(self, context),
-                "ask_joke"  : intent.JokeIntent(self, context),
-                "unknown"   : intent.UnKnownIntent(self, context)
-            }
-        
-    
+            "greet": intent.HelloIntent(self, context),
+            "get_time": intent.GetTimeIntent(self, context),
+            "ask_joke": intent.JokeIntent(self, context),
+            "unknown": intent.UnKnownIntent(self, context)
+        }
+
     def handle(self, message):
         """
         Handles incoming message using trained NLU model and prints response to

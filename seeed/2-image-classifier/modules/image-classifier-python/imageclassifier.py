@@ -26,11 +26,13 @@ class ImageClassifier(object):
         image_data = self.get_image_data(image)
 
         with tf.Session() as sess:
-            output_tensor = sess.graph.get_tensor_by_name('MobilenetV2/Predictions/Reshape_1:0')
+            output_tensor = sess.graph.get_tensor_by_name(
+                'MobilenetV2/Predictions/Reshape_1:0')
             predictions = sess.run(output_tensor, {'input:0': image_data})
             predictions = np.squeeze(predictions)
 
-            top_k = predictions.argsort()[-self.FLAGS.num_top_predictions:][::-1]
+            top_k = predictions.argsort(
+            )[-self.FLAGS.num_top_predictions:][::-1]
 
             results = []
             for node_id in top_k:
@@ -47,8 +49,9 @@ class ImageClassifier(object):
         Converts an image from a Flask http request to a numpy array in the
         shape used by the Tensorflow MobileNet model.
         """
-        img = np.array(Image.open(image).resize((224,224))).astype(np.float) / 128 - 1
-        return img.reshape(1,224,224,3)
+        img = np.array(Image.open(image).resize(
+            (224, 224))).astype(np.float) / 128 - 1
+        return img.reshape(1, 224, 224, 3)
 
     def create_graph(self):
         """
@@ -80,7 +83,8 @@ class ImageClassifier(object):
         https://github.com/tensorflow/models/blob/master/research/inception/inception/data/build_imagenet_data.py#L463
         """
 
-        synset_list = [s.strip() for s in open(self.FLAGS.label_path).readlines()]
+        synset_list = [s.strip()
+                       for s in open(self.FLAGS.label_path).readlines()]
         synset_to_human_list = open(self.FLAGS.label_metadata_path).readlines()
 
         synset_to_human = {}

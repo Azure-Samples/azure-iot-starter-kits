@@ -1,6 +1,7 @@
 import random
 import datetime
 
+
 class Command(object):
 
     def do(self, bot, entity):
@@ -17,14 +18,15 @@ class GreetCommand(Command):
     """
     The command to greet user
     """
-    
+
     def __init__(self):
         """
         Default constructor which will create list of gretings to be picked
         randomly to make our bot more human-like
         """
-        self.greetings = ["Hey!", "Hello!", "Hi there!", "Hallo!", "How are you!"]
-    
+        self.greetings = ["Hey!", "Hello!",
+                          "Hi there!", "Hallo!", "How are you!"]
+
     def do(self, bot, entity):
         return(random.choice(self.greetings))
 

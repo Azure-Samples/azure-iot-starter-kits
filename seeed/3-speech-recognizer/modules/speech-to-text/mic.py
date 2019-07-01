@@ -13,7 +13,7 @@ class MicrophoneThread(threading.Thread):
     CHUNK_SIZE = 8096
     FORMAT = pyaudio.paInt16
     WIDTH = 2
-    CHANNELS = 1 # 1 for mono, 2 for stereo, 4 for ReSpeaker quad array
+    CHANNELS = 1  # 1 for mono, 2 for stereo, 4 for ReSpeaker quad array
     RESAMPLE_RATIO = float(TARGET_RATE) / float(SAMPLE_RATE)
     BUTTON = 12
 
@@ -37,17 +37,18 @@ class MicrophoneThread(threading.Thread):
         # Find best audio device to use.
         p = pyaudio.PyAudio()
         audio_device = self.get_audio_device(p)
-        print('Using audio device: {}'.format(p.get_device_info_by_index(audio_device)))
+        print('Using audio device: {}'.format(
+            p.get_device_info_by_index(audio_device)))
 
         self.mic = p.open(format=self.FORMAT,
-                     channels=self.CHANNELS,
-                     rate=self.SAMPLE_RATE,
-                     frames_per_buffer=self.CHUNK_SIZE,
-                     input=True,
-                     input_device_index=audio_device)
+                          channels=self.CHANNELS,
+                          rate=self.SAMPLE_RATE,
+                          frames_per_buffer=self.CHUNK_SIZE,
+                          input=True,
+                          input_device_index=audio_device)
         self.mic.start_stream()
 
-        self.process_mic(self.mic)        
+        self.process_mic(self.mic)
 
     def process_mic(self, mic):
         audio_frames = array.array('h')
@@ -57,7 +58,8 @@ class MicrophoneThread(threading.Thread):
                 if len(audio_frames) == 0:
                     print("Listening ...")
 
-                frames = array.array('h', mic.read(self.CHUNK_SIZE, exception_on_overflow = False))
+                frames = array.array('h', mic.read(
+                    self.CHUNK_SIZE, exception_on_overflow=False))
                 audio_frames.extend(frames)
 
             # The button is not held down, run speech-to-text.
@@ -79,7 +81,8 @@ class MicrophoneThread(threading.Thread):
 
     def speech_to_text(self, audio_frames):
         with self.stt.start_utterance():
-            (resampled, _) = audioop.ratecv(audio_frames, self.WIDTH, self.CHANNELS, self.SAMPLE_RATE, self.TARGET_RATE, None)
+            (resampled, _) = audioop.ratecv(audio_frames, self.WIDTH,
+                                            self.CHANNELS, self.SAMPLE_RATE, self.TARGET_RATE, None)
             self.stt.process_raw(resampled, False, False)
             return self.stt.hypothesis()
 

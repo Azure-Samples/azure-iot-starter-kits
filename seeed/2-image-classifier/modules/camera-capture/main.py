@@ -27,7 +27,8 @@ def stream_camera_data(camera):
         image = {'image': stream}
 
         try:
-            requests.post('http://image-classifier:8080/classify', files=image, hooks={'response': c_request_response})
+            requests.post('http://image-classifier:8080/classify',
+                          files=image, hooks={'response': c_request_response})
         except Exception as e:
             print(e)
 
@@ -51,14 +52,16 @@ def c_request_response(r, *args, **kwargs):
 
 
 def send_confirmation_callback(message, result, user_context):
-    print("Confirmation received with result: {} message: {}\n".format(result, user_context))
+    print("Confirmation received with result: {} message: {}\n".format(
+        result, user_context))
 
 
 # device_twin_callback is invoked when twin's desired properties are updated.
 def device_twin_callback(update_state, payload, user_context):
     global IMAGE_CLASSIFY_THRESHOLD
 
-    print("\nTwin callback called with:\nupdateStatus = {}\npayload = {}".format(update_state, payload))
+    print("\nTwin callback called with:\nupdateStatus = {}\npayload = {}".format(
+        update_state, payload))
     data = json.loads(payload)
     if "desired" in data:
         data = data["desired"]

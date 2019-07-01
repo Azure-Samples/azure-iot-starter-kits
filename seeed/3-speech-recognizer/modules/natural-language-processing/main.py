@@ -11,11 +11,13 @@ BOT = None
 # Start web server
 application = Flask(__name__)
 
+
 @application.route('/chat', methods=['POST'])
 def chat():
     text = request.get_data(as_text=True)
     result = BOT.handle(text)
     return jsonify(result)
+
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()

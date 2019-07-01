@@ -18,7 +18,7 @@ def mic_callback(text):
     if text:
         if oled_display:
             oled_display.println(text)
-        
+
         # Use spaCy to generate a chat response to the request.
         response = get_response(text)
 
@@ -31,7 +31,8 @@ def mic_callback(text):
 
 def get_response(text):
     try:
-        res = requests.post('http://natural-language-processing:8080/chat', text)
+        res = requests.post(
+            'http://natural-language-processing:8080/chat', text)
         if res.content and type(res.content) is str:
             content = res.content.replace('"', '')
             print('> {}'.format(content))
@@ -43,7 +44,7 @@ def get_response(text):
 
 
 def send_chat_to_iothub(request, response):
-    chat = { 'request': request, 'response': response }
+    chat = {'request': request, 'response': response}
     chat_json = json.dumps(chat, default=lambda o: o.__dict__)
 
     message = IoTHubMessage(chat_json)
@@ -52,7 +53,8 @@ def send_chat_to_iothub(request, response):
 
 
 def send_confirmation_callback(message, result, user_context):
-    print("Confirmation received with result: {} message: {}".format(result, user_context))
+    print("Confirmation received with result: {} message: {}".format(
+        result, user_context))
 
 
 if __name__ == "__main__":

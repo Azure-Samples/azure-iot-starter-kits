@@ -1,6 +1,7 @@
 import smbus2
 import bme280
 
+
 class BME280Sensor():
     def __init__(self):
         self.port = 1

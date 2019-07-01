@@ -8,6 +8,7 @@ classifier = None
 # Start web server
 application = Flask(__name__)
 
+
 @application.route('/classify', methods=['POST'])
 def classify_image():
     file = request.files['image']

@@ -8,9 +8,10 @@ from iothub_client import IoTHubClient, IoTHubClientError, IoTHubTransportProvid
 # By default, messages do not expire.
 MESSAGE_TIMEOUT = 10000
 
+
 class HubManager(object):
 
-    def __init__(self, connection_string = None, protocol = IoTHubTransportProvider.MQTT):
+    def __init__(self, connection_string=None, protocol=IoTHubTransportProvider.MQTT):
         if not connection_string:
             connection_string = os.environ['EdgeHubConnectionString']
 
@@ -36,4 +37,5 @@ class HubManager(object):
                 self.client.set_option("TrustedCerts", file.read())
                 print("set_option TrustedCerts successful")
             except IoTHubClientError as iothub_client_error:
-                print("set_option TrustedCerts failed (%s)" % iothub_client_error)
+                print("set_option TrustedCerts failed (%s)" %
+                      iothub_client_error)
