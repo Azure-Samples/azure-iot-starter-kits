@@ -17,7 +17,7 @@ This repository contains code and instructions for deploying code to Azure IoT s
 
 Projects exist for the following manufacturers:
 
-* [seeed](seeed/README.md)
+* [seeed](https://github.com/Azure-Samples/azure-iot-starter-kits/tree/master/seeed)
 
 ## Getting Started
 
