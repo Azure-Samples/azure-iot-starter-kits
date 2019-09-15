@@ -32,10 +32,10 @@ def mic_callback(text):
 def get_response(text):
     try:
         res = requests.post('http://natural-language-processing:8080/chat', text)
-        if res.content and type(res.content) is str:
-            content = res.content.replace('"', '')
-            print('> {}'.format(content))
-            return content
+        if res.text and type(res.text) is str:
+            response_text = res.text.replace('"', '')
+            print('> {}'.format(response_text))
+            return response_text
     except Exception as e:
         print(e)
 
