@@ -3,11 +3,11 @@
 Instructions below assume that you have completed the physical assembly of your Raspberry Pi 3.
 
 ## Network setting
-You may use your Raspberry Pi 3 with WiFi only, Ethernet only, or both WiFi and Ethernet.
+You may use your preconfigured Grove Starter Kit Raspberry Pi 3 with WiFi only, Ethernet only, or both WiFi and Ethernet.
 
-* Using Eternet  
+* Using Ethernet  
 
-    **NOTE**: Please make sure your netowrk address is not 192.168.4.x subnet.  The Raspberry Pi 3 is preconfigured with 192.168.4.1 WiFi Access Point.  
+    **NOTE**: Please make sure your network address is not 192.168.4.x subnet.  The kit's Raspberry Pi 3 is preconfigured with 192.168.4.1 WiFi Access Point.  
 
     When boot is complete, you can see IP Address of your Raspberry Pi 3 on the screen.
     
@@ -122,7 +122,7 @@ In addition to steps above, you need to enable additional interfaces.
     - Select option 5 for `Interfacing Options`.
     - Select option P2 (`SSH`) to enable SSH.
 1. Enable the camera:
-    - Again select option 5 for `Interfacing Options`.
+    - Select option 5 for `Interfacing Options`.
     - Select option P1 (`Camera`) to enable the camera.
 1. Enable the I2C interface:
     - Select option 5 for `Interfacing Options`.
@@ -142,4 +142,4 @@ In addition to steps above, you need to enable additional interfaces.
     - Select the appropriate values from the following screens, e.g. 'English (US)', pressing `ENTER` on each screen to make a selection
 1. Press `ESC` to exit raspi-config.
 
-Once you complete steps described above, follow the instruction in the begineeing of this document.
+Once you complete steps described above, follow the instruction in the beginning of this document.
