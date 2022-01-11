@@ -1,5 +1,5 @@
-# Tensorflow image classifier
-[Tensorflow image classifier](https://www.tensorflow.org/tutorials/image_recognition) that recognizes 1000 classes of objects from the [ImageNet](http://image-net.org/) data source.  The model uses [MobileNet v2](https://github.com/tensorflow/models/tree/master/research/slim/nets/mobilenet), which is optimized for mobile/constrained/low-power scenarios and is around 14 MB in size.
+# TensorFlow image classifier
+[TensorFlow image classifier](https://www.tensorflow.org/tutorials/image_recognition) that recognizes 1000 classes of objects from the [ImageNet](http://image-net.org/) data source.  The model uses [MobileNet v2](https://github.com/tensorflow/models/tree/master/research/slim/nets/mobilenet), which is optimized for mobile/constrained/low-power scenarios and is around 14 MB in size.
 
 Build the container for MobileNet v2 1.0 with 224x224 images:
 
@@ -20,8 +20,8 @@ Classify a .jpg image:
 %> curl -X POST http://localhost:8080/classify -F 'image=@banana.jpg'
 ```
 
-# Tensorflow nightly builds for Raspberry Pi:
-Tensorflow publishes nightly builds for Raspberry Pi (python/python3 and pi/pi zero):
+# TensorFlow nightly builds for Raspberry Pi:
+TensorFlow publishes nightly builds for Raspberry Pi (python/python3 and pi/pi zero):
 
 ```
 http://ci.tensorflow.org/view/Nightly/job/nightly-pi/176/artifact/output-artifacts/tensorflow-1.5.0-cp27-none-any.whl
